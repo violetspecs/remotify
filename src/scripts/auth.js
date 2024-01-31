@@ -28,11 +28,7 @@ async function signInWithEmail(email, password) {
     if (data) {
         console.log(data)
         store.isLoggedIn = true
-        if (data.user) {
-            return true
-        } else {
-            return false
-        }
+        return data.user ? true : false
     }
 }
 
